@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+header{
+    background-color: #fff;
+}
+nav{
+    color: #fefefe;
+    padding-top: 45px;
+    padding-bottom: 30px;
+    padding-right: 40px ;
+    padding-left: 40px;
+    display: flex;
+    gap: 30px;
+    transition: 0.3s;
+    position: absolute;
+    right: 10px;
+}
+nav a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 100;
+    padding: 5px 16px;
+    border-radius: 99px;
+}
+
+
+
+header nav a:hover{
+    background-color: rgb(61, 18, 188);
+    color: #fff;
+}
+header nav:hover > a:not(:hover){
+    background: none;
+}
+
+
+    /* Header Styles */
+    header {
+        background-color: #fefefe;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5%;
+        display: inline-flexbox;
+    }
+    .heading {
+        font-size: 40px;
+        color: #000000;
+        position: absolute;
+        left: 30px;
+    }
+.choice{
+    margin-left: 600px;
+}
+.choice button{
+    background-color: rgb(61, 18, 188);
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 100;
+    padding: 5px 16px;
+    border-radius: 99px;
+    font-size: 40px;
+    border-color: #fefefe;
+    justify-content: center;
+    margin-top: 400px;
+    margin-left: 100px;
+}

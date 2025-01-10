@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="company_applicante.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='company_applicante.css') }}">
+</head>
+<body>
+    <header>
+        <div id="head">
+            <h1 class="heading">
+                <a>Internify</a>
+            </h1>
+            <nav>
+                <a href="#welcome" class="active">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#intc">Internships</a>
+                <a href="#contact">Contact</a>
+                <input type="text" placeholder="search">
+            </nav>
+        </div>
+    </header>
+    <main>
+        <nav class="leftside">
+            <form action="#" method="post" onsubmit="confirmSubmit()">
+                <div id="profile">
+                    <label for="profiles" id="profile-label">
+                        <div id="profile-image">
+                            <img id="display-image" src="" />
+                        </div>
+                        <div id="camera-icon">&#128247;</div>
+                    </label>
+                    <input type="file" id="profiles" name="profiles" accept="image/*" style="display: none" />
+                    <div id="name">
+                        <a href="">{{x}}</a>
+                    </div>
+                </div>
+            </form>
+            <div class="other">
+                <div>
+                    <a href="#">Applyed Jobs</a>
+                    <hr>
+                    <a href="#">Approved</a>
+                    <hr>
+                    <a href="#">Message</a>
+                    <hr>
+                </div>
+            </div>
+        </nav>
+        <nav id="rightside">
+            <div id="message">
+                <div id="message2"><p>Get the best interns from top colleges</p></div>
+                <div>
+                    <img src="{{ url_for('static', filename='Blogging-bro.png') }}" alt="Blogging-bro.png">
+                </div>
+            </div>
+            <form>
+            <div class="Add">
+                <a href="/internship_info">
+                    <button type="button" id="add">Add</button>
+                </a>
+            </div>
+            </form>
+            <hr>
+            {% for row in data %}
+            <div class="company">
+                <div class="com">
+                    <a href="#">{{row[1]}}</a>
+                </div>
+                <p>{{row[2]}}</p>
+                <div id="req"><a>{{row[3]}}</a>
+                <div id="proposal"><a>Proposals:{{row[5]}}+</a></div>
+                <div id="detailsbut">               
+                <button type="submit" class="details" onclick="toggleInfoSection()">Details</button>
+            </div>
+            </div>
+            <hr color="black">
+            {% endfor %}
+        </nav>
+        <nav class="info_section" >
+            <form action="back2" method="post">
+            {% for row in data1 %}
+                <input type="hidden"  name="cname" value="{{x}}">
+                {% endfor %}
+            <button type="submit"><svg id="svg1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cross-icon">
+                <a>
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </a>
+            </svg></button></form>
+            <h2>Student Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sir No.</th>
+                        <th>Name of Student</th>
+                        <th>View</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in data1 %}
+                    <tr>
+                        <td>{{loop.index}}</td>
+                        <td>{{row[0]}}</td>
+                        <td><form action="/View" method="post">
+                            <input type="hidden"  name="stu_name" value="{{row[0]}}">
+                            <input type="hidden"  name="cname" value="{{x}}">
+                            <input type="hidden"  name="tital" value="{{var1}}">
+                            <div id="view"><button  type="submit" class="details" >View</button></div>
+                        </form></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </nav>
+    </main>
+    <script>
+        // Function to handle file input and display selected image
+        document.getElementById("profiles").addEventListener("change", function (e) {
+            var image = document.getElementById("display-image");
+            var file = e.target.files[0];
+
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    image.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        document.getElementById("edit-profile").addEventListener("click", function () {
+            //  edit profile logic 
+            console.log("Edit Profile clicked");
+        });
+
+        document.getElementById("profiles").addEventListener("change", function (e) {
+            var cameraIcon = document.getElementById("camera-icon");
+            var fileInput = e.target;
+
+            if (fileInput.files.length > 0) {
+                // Image selected, hide camera icon
+                cameraIcon.style.opacity = 0;
+            } else {
+                // No image selected, show camera icon
+                cameraIcon.style.opacity = 1;
+            }
+        });
+
+        function toggleInfoSection() {
+            var infoSection = document.querySelector('.info_section');
+            infoSection.classList.toggle('show');
+        }
+        function closeInfoSection() {
+            // Hide the info section by removing the 'show' class
+            document.querySelector('.info_section').classList.remove('show');
+        }
+    </script>
+</body>
+</html>

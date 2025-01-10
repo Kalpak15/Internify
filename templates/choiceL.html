@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="choice.css">
+    <style>body {
+        font-family: Arial, sans-serif;
+        color: #333;
+        line-height: 1.6;
+    }
+    
+    header{
+        background-color: #fff;
+    }
+    nav{
+        color: #fefefe;
+        padding-top: 45px;
+        padding-bottom: 30px;
+        padding-right: 40px ;
+        padding-left: 40px;
+        display: flex;
+        gap: 30px;
+        transition: 0.3s;
+        position: absolute;
+        right: 10px;
+    }
+    nav a{
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 100;
+        padding: 5px 16px;
+        border-radius: 99px;
+    }
+    
+    
+    
+    header nav a:hover{
+        background-color: rgb(61, 18, 188);
+        color: #fff;
+    }
+    header nav:hover > a:not(:hover){
+        background: none;
+    }
+    
+    
+        /* Header Styles */
+        header {
+            background-color: #fefefe;
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5%;
+            display: inline-flexbox;
+        }
+        .heading {
+            font-size: 40px;
+            color: #000000;
+            position: absolute;
+            left: 30px;
+        }
+    .choice{
+        margin-left: 600px;
+    }
+    .choice button{
+        background-color: rgb(61, 18, 188);
+        color: #fff;
+        text-decoration: none;
+        font-size: 30px;
+        font-weight: 100;
+        padding: 5px 16px;
+        border-radius: 99px;
+        font-size: 40px;
+        border-color: #fefefe;
+        justify-content: center;
+        margin-top: 400px;
+        margin-left: 100px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="head">
+        <h1 class="heading">
+            <a>Internify</a>
+        </h1>
+        <nav>
+        <a href="#welcome" class="active">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#intc">Internships</a>
+        <a href="#contact">Contact</a>
+        </nav>
+    </div>
+    </header>
+    <main>
+        <div class="choice">
+            <a href="/login_page_company"><button type="button">Company</button></a>
+            <a href="/login_page"><button type="button">Student</button></a>
+        </div>
+    </main>
+</body>
+</html>

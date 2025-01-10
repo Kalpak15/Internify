@@ -1,0 +1,291 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+header{
+    background-color: #fff;
+}
+nav{
+    color: #fefefe;
+    padding-top: 45px;
+    padding-bottom: 30px;
+    padding-right: 40px ;
+    padding-left: 40px;
+    display: flex;
+    gap: 30px;
+    transition: 0.3s;
+    position: absolute;
+    right: 10px;
+}
+nav a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 100;
+    padding: 5px 16px;
+    border-radius: 99px;
+}
+
+
+
+header nav a:hover{
+    background-color: rgb(61, 18, 188);
+    color: #fff;
+}
+header nav:hover > a:not(:hover){
+    background: none;
+}
+
+
+
+header input{
+    border-radius: 99px;
+    padding-left: 20px;
+    color: #000000;
+    width: 170px;
+    background: #fcfcfc;
+  border: 1px solid #aaa;
+  box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
+}
+
+
+    /* Header Styles */
+    header {
+        background-color: #fefefe;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5%;
+        display: inline-flexbox;
+    }
+    .heading {
+        font-size: 40px;
+        color: #000000;
+        position: absolute;
+        left: 30px;
+    }
+
+
+#Hero_section{
+    height: 1000px;
+    width: 700px;
+    display: flex;
+}
+
+#Hero_section h1{
+    font-size: 55px;
+    color: #000000;
+    position: absolute;  
+    left: 70px;
+    top: 390px;
+}
+#Hero_section a{
+    color: rgb(61, 18, 188);
+}
+
+#p{
+    color: rgb(61, 18, 188);
+    position: absolute;
+    left: 75px;
+    top: 490px;
+    color: #000000;
+    font-size: 30px;
+
+}
+#Hero_section button{
+    background-color: rgb(61, 18, 188);
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 100;
+    padding: 5px 16px;
+    border-radius: 99px;
+    font-size: 27px;
+    border-color: #fefefe;
+}
+#Sign_up{
+    padding-left: 50px;
+    margin-left: 30px;
+}
+#Hero_section img{
+    position: absolute;
+    left: 1100px;
+    top: 240px;
+}
+
+/* About Us */
+.About_Us{
+    height: 900px;
+    width: 1800px;
+    display: flex;
+}
+
+.About_Us img{
+    position: absolute;
+    left : 20px;
+}
+
+#about{
+    position: relative;
+    left: 900px;
+    width: 900px;
+    top: 50px;
+}
+
+#about h2{
+    font-size: 60px;
+}
+#about p{
+    color: #000;
+    font-size: 20px;
+}
+
+
+/* About Us */
+.internship_categories{
+    height: 700px;
+    width: 1500px;
+    display: flex;
+    color: #fff;
+    background-color: rgb(61, 18, 188);
+    border-radius: 30px;
+    position: relative;
+    left: 170px;
+}
+
+#intc{
+    color: #fff;
+    position: relative;
+    left: 30px;
+    width: 650px;
+}
+
+.internship_categories h2{
+    color: #fff;
+    font-size: 60px;
+}
+#intc p{
+    color: #fff;
+    font-size: 25px;
+}
+
+.internship_categories img{
+    border-radius: 30px;
+    position: relative;
+    left: 45px;
+    top: 110px;
+}
+
+
+/*featured_internships*/
+
+.featured_internships{
+    height: 600px;
+    width: 1500px;
+    margin: 100px;
+    display: flex;
+    position: relative;
+    left: 70px;
+}
+#img4{
+    height: 700px;
+    width: 900px;
+    border-radius: 20px;
+    background-image: url('img4.jpg');
+    background-position: center;
+}
+#fi{
+    padding: 5%;
+    border-radius: 20px;
+    background-color: #c1c0c0;
+    height: 550px;
+    margin-left: 20px;
+}
+#fi h2{
+    font-size: 50px;
+    color: #000;
+}
+#fi a{
+    color: rgb(61, 18, 188);
+}
+#fi p{
+    color: #000;
+    font-size: 20px;
+}
+
+
+/*Works_section*/
+
+.Works_section{
+    height: 900px;
+    width: 1500px;
+    margin: 100px;
+    display: flex;
+    position: relative;
+    left: 70px;
+}
+
+#ws{
+    margin: 50px;
+    width: 800px;
+}
+#ws h2{
+    color: #000;
+    font-size: 60px;
+}
+#ws p{
+    color: #000;
+    font-size: 20px;
+}
+
+#img6{
+    position: relative;
+    top: 140px;
+    left: 100px;
+}
+
+
+/*Contact_us*/
+.Contact_us{
+    height: 700px;
+    width: 1500px;
+    margin: 10px;
+    position: relative;
+    left: 70px;
+}
+#contact{
+    color: #ffffff;
+    height: 700px;
+    width: 1600px;
+    background-color: #333;
+    border-radius: 20px;
+    position: relative;
+}
+#contact h2{
+    color: #fff;
+    font-size: 60px;
+    position: relative;
+    top: 30px;
+    left: 40px;
+}
+#contact p{
+    font-size: 20px;
+    position: relative;
+    top: 30px;
+    left: 40px;
+}
+
+
+        /* Main Content Styles */
+        
+        .subheading {
+            font-size: 24px;color: #080000;
+        }
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: left;
+            padding: 10px 0;
+        }
+        

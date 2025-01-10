@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style2.css') }}">
+
+
+</head>
+<body>
+    <header>
+        <div id="head">
+        <h1 class="heading">
+            <a>Internify</a>
+        </h1>
+        <nav>
+        <a href="#welcome" class="active">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#intc">Internships</a>
+        <a href="#contact">Contact</a>
+        <input type="text" placeholder="search">
+        </nav>
+    </div>
+    </header>
+    <main>
+        <section id="Hero_section">
+            <div id="welcome">
+            <h1>Welcome to <a>Internify</a></h1>
+            <div id="p">
+            <p>Explore diverse internship opportunities tailored to your interests.</p>
+            <p>Start your journey today for growth and success!</p>
+            <a href="/choiceL"><button type="button"  id="Login">Login</button></a>
+            <a href="/choiceS"><button type="button" id="Sign_up">Sign up</button></a>
+            </div>
+        </div>
+        <img src="{{ url_for('static', filename='img1.png') }}" alt="img1.png" height="800px">
+        </section>
+        <section  class="About_Us">
+            <div id="img2"><img src="{{ url_for('static', filename='img2.png') }}" alt="img2.png" height="800px"></div>
+            <div id="about">
+            <h2 class="subheading">About Us</h2>
+            <p>At Internify, we're passionate about bridging the gap between ambitious students and dynamic companies. Our platform serves as a catalyst for growth, connecting talented individuals with invaluable internship experiences. Committed to fostering innovation and learning, we curate a diverse range of opportunities tailored to individual interests and career aspirations. Whether you're a student eager to immerse yourself in real-world challenges or an employer seeking fresh perspectives, we're here to facilitate meaningful connections that drive success. Join us in shaping the future of talent development and unlocking boundless potential together.            </p>
+            </div>
+
+        </section>
+        <section class="internship_categories">
+            <div id="intc">
+            <h2>Internship Categories</h2>
+            <p>Explore a World of Opportunities: Our Internship Categories</p>
+            <p>Explore diverse internship categories matched to your passions, from marketing to software development and design. Our platform features meticulously curated opportunities across industries like finance, engineering, healthcare, and hospitality. Start your journey towards professional fulfillment today.</p>
+        </div>
+        <div><img src="{{ url_for('static', filename='img3.jpg') }}" alt="img3.jpg" height="400px"></div>   
+        </section>
+
+        <section class="featured_internships">
+            <div id="img4">
+            </div>
+            <div id="fi">
+            <h2>Featured <a>Internships</a></h2>
+            <p>Discover Your Next Opportunity</p>
+            <p>Discover our featured internships, each offering exciting opportunities for growth and learning. Explore brief descriptions of these highlighted positions and click on the CTA buttons to learn more about how they can kickstart your career journey. Dive into the details and find the perfect match for your skills and aspirations.</p>
+            <p>Ready to take the next step? Click below to learn more about each internship and apply today!</p>
+            <p herf="#">Learn more</p>
+            <p>Don't miss out on these incredible opportunities. Start your journey towards a successful career with us!</p>
+        </div>
+        </section>
+        <section class="Works_section">
+            
+            <div id="ws">
+            <h2>How It Works</h2>
+            <p>Navigating our platform to find the ideal internship is simple. Follow these easy steps:</p>
+            <p>Explore: Browse through our diverse range of internship opportunities tailored to various industries and interests.</p>
+            <p>Filter: Use our intuitive filtering options to narrow down your search based on location, industry, duration, and more.</p>
+            <p>Discover: Explore detailed internship listings, including descriptions, requirements, and benefits, to find the perfect match for your skills and goals.</p>
+            <p>Apply: Once you've found an internship that interests you, easily apply through our platform with just a few clicks.</p>
+            <p>Connect: Stay updated on your application status and communicate directly with employers through our messaging system.</p>
+            <p>Grow: Begin your internship journey, gain valuable experience, and unlock opportunities for personal and professional growth.</p>
+            <p> finding your dream internship has never been easier. Start your journey today!</p>
+        </div>
+        <div id="img6"><img src="{{ url_for('static', filename='img6.png') }}" alt="img6.png" height="750px"></div>
+        </section>
+        <section class="Contact_us">
+            <div id="contact">
+            <h2>Contact Us </h2>
+            <p>Email address : abc@gmail.com</p>
+            <p>Phone number :92XXXXXXXX</p>
+            <p>Social media links</p>
+            <p>Twitter :-abc.twitter.com</p>
+            <p>Instagram :- @acd_1234</p>
+        </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+
+

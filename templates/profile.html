@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='profile.css') }}">
+    
+</head>
+<body>
+
+<div class="profile-container">
+    <div id="profile">
+        <label for="profiles" id="profile-label">
+            <div id="profile-image">
+                <img id="display-image" src="" />
+            </div>
+        </label>
+        <input type="file" id="profiles" name="profiles" accept="image/*" style="display: none" />
+        <div id="un"><label>{{var1}}</label></div>
+    </div>
+    {% for row in data1 %}
+    {% for row in data %}
+    <div class="profile-info">
+        <label>First Name:</label>
+        <span>{{row[0]}}</span>
+    </div>
+
+    <div class="profile-info">
+        <label>Last Name:</label>
+        <span>{{row[1]}}</span>
+    </div>
+
+    <div class="profile-info">
+        <label>Email:</label>
+        <span>{{row[4]}}</span>
+    </div>
+
+    <div class="profile-info">
+        <label>Phone No.:</label>
+        <span>{{row[3]}}</span>
+    </div>
+    {% endfor %}
+
+    <div class="profile-info">
+        <label>Resume:</label>
+        <a href={{row[3]}} target="_blank">View Resume</a>
+    </div>
+
+    <div class="profile-info">
+        <label>About Me:</label>
+        <p>{{row[2]}}</p>
+    </div>
+
+    <div class="profile-links">
+        <a href="{{row[6]}}" target="_blank">LeetCode</a>
+        <a href="{{row[5]}}" target="_blank">LinkedIn</a>
+        <a href="{{row[4]}}" target="_blank">Github</a>
+    </div>
+    <form action="/accept" method="post">
+        <input type="hidden"  name="stu_name" value="{{row[0]}}">
+        <input type="hidden"  name="cname" value="{{x}}">
+        <input type="hidden"  name="tital" value="{{tital}}">
+        <div id="view"><button  type="submit" class="details" >Accept</button></div>
+    </form>
+    <form action="/goback" method="post">
+        <input type="hidden"  name="cname" value="{{x}}">
+        <input type="hidden"  name="tital" value="{{tital}}">
+    <div id="view" href="goback"><button  type="submit" class="details" >Reject</button></div>
+    </form>
+    {% endfor %}
+</div>
+
+</body>
+</html>
